@@ -11,6 +11,7 @@ const products = [
         name: 'Smart watch',
         price: '$500',
         image: ImageOne,
+        description: 'Stylish and versatile smartwatch designed to keep you connected and on track',
         bgColor: 'rgb(40, 71, 40)',
         ftColor: 'green',
         features: [
@@ -26,6 +27,7 @@ const products = [
         name: 'Head phones',
         price: '$300',
         image: ImageTwo,
+        description: 'Premium wireless headphones delivering immersive sound and all-day comfort',
         bgColor: 'rgb(30, 113, 190)',
         ftColor: 'rgb(0, 162, 255)',
         features: [
@@ -41,6 +43,7 @@ const products = [
         name: 'Game pad',
         price: '$700',
         image: ImageThree,
+        description: 'Ergonomic game pad designed for precision control and an enhanced gaming experience',
         bgColor: 'rgb(114, 6, 114)',
         ftColor: 'rgb(174, 39, 179)',
         features: [
@@ -52,7 +55,7 @@ const products = [
     }
 ];
 
-const Product = ({name, price, image, bgColor, initialRating, ftColor, features}) => {
+const Product = ({name, price, image, description, bgColor, initialRating, ftColor, features}) => {
   return (
         <div className='product'>
             <div className='product-image'>
@@ -64,7 +67,7 @@ const Product = ({name, price, image, bgColor, initialRating, ftColor, features}
             <div className='description'>
                 <div className='description-1'>
                 <h1>{name}</h1>
-                <p>Stylish and versatile smartwatch designed to keep you connected and on track</p>
+                <p>{description}</p>
                 <div className='star'>
                     <Star initialRating={initialRating} color={ftColor}/>
                 </div>
